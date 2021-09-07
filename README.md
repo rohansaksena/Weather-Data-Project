@@ -20,8 +20,8 @@ It is a time-series data set with per hour information about the weather conditi
 ### Q.12 Show all the records where 'weather condition' is Fog
 ### Q.13 Find all instances where 'Weather is clear' or 'visibility is above 40'
 ### Q.14 All instances when 'weather is clear' and 'relative humidity is greater than 50'
-### or
-### Visibility is above 40
+###      or
+###      Visibility is above 40
 
 ## Project Setup
 To clone this repository you will need to have Python compiler 
