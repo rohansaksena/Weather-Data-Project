@@ -1,13 +1,9 @@
  # Weather Data Project 
-<hr>
  
 The Weather Data Project is one of my first projects on Data Analysis
 It is a time-series data set with per hour information about the weather conditions at a particular location.It records Temperature, Dew Point Temperature, Relative Humidity, Wind Speed, Visibility, Pressure and Conditions.  
 
-<hr>
- 
 ##  Project outcomes:
-<hr>
 ##  We will be answering a bunch of questions :
 
 ### Q.1 Check whether the data is sucessfully loaded or not
@@ -27,10 +23,7 @@ It is a time-series data set with per hour information about the weather conditi
 ### or
 ### Visibility is above 40
 
-<hr>
-
 ## Project Setup
-<hr>
 To clone this repository you will need to have Python compiler 
 installed on your system alongside with the Pandas library.
  
