@@ -6,22 +6,72 @@ It is a time-series data set with per hour information about the weather conditi
 ##  Project outcomes:
 ####  We will be successfully answering a bunch of questions :
 
-### Q.1 Check whether the data is sucessfully loaded or not
-### Q.2 Find all the unique 'Wind Speed' values in data.
-### Q.3 Number of times the weather is exactly clear
-### Q.4 Find out the Null Values in our DataSet
-### Q.5 Rename the column 'weather' to 'weather condition'
-### Q.6 Calculate the mean visibility
-### Q.7 Calculate the Standard Deviation of 'Pressure' in this data
-### Q.8 Calculate the variance of 'Relative Humidity' in the data given
-### Q.9 Find all instances when 'Wind Speed' is greater than 24 and 'Visibility is 25'
-### Q.10 What is the mean value of each column against each 'Weather Condition'
-### Q.11 What is the Minimum and Maximum value of each column against each 'weather condition'
-### Q.12 Show all the records where 'weather condition' is Fog
-### Q.13 Find all instances where 'Weather is clear' or 'visibility is above 40'
-### Q.14 All instances when 'weather is clear' and 'relative humidity is greater than 50'
-###      or
-###      Visibility is above 40
+### 1. Check whether the data is sucessfully loaded or not
+```
+weather_df = pd.read_csv('Weather Data.csv')
+weather_df.head()  
+```
+### 2. Find all the unique 'Wind Speed' values in data.
+ ```
+ weather_df['Wind Speed_km/h'].unique()
+ ```
+### 3. Number of times the weather is exactly clear
+```
+len(weather_df[weather_df['Weather'] == 'Clear'])
+```
+### 4. Find out the Null Values in our DataSet
+```
+weather_df.isnull().sum()
+```
+### 5. Rename the column 'weather' to 'weather condition'
+```
+weather_df = weather_df.rename(columns={'Weather':'Weather Condition'})
+weather_df.info()
+```
+### 7.Number of times the 'wind speed was exactly equal to 4km/hr'
+```
+len(weather_df.groupby('Wind Speed_km/h').get_group(4))
+```
+### 8. Calculate the mean visibility
+```
+weather_df['Visibility_km'].mean()
+```
+### 9. Calculate the Standard Deviation of 'Pressure' in this data
+```
+weather_df['Press_kPa'].std()
+```
+### 10. Calculate the variance of 'Relative Humidity' in the data given
+```
+weather_df['Rel Hum_%'].var()
+```
+### 11. Displaying Results for condition where Weather Condition is equal to'Snow'
+```
+weather_df[weather_df['Weather Condition']=="Snow"]
+```
+### 12. Find all instances when 'Wind Speed' is greater than 24 and 'Visibility is 25'
+```
+weather_df[(weather_df['Wind Speed_km/h']>24) & (weather_df['Visibility_km']==25)]
+```
+### 13. What is the mean value of each column against each 'Weather Condition'
+```
+weather_df.groupby(weather_df['Weather Condition']).mean()
+```
+### 14. What is the Minimum and Maximum value of each column against each 'weather condition'
+```
+weather_df.groupby(weather_df['Weather Condition']).max()
+```
+### 15. Show all the records where 'weather condition' is Fog
+```
+weather_df[weather_df['Weather Condition']=='Fog']
+```
+### 15. Find all instances where 'Weather is clear' or 'visibility is above 40'
+```
+weather_df[(weather_df['Weather Condition']=='Clear') | (weather_df['Visibility_km'] > 40)]
+```
+### 16. All instances when 'weather is clear' and 'relative humidity is greater than 50' or 'Visibility is above 40'
+```
+weather_df[(weather_df['Weather Condition']=='Clear') & (weather_df['Rel Hum_%']>50) | (weather_df['Visibility_km'] > 40)]
+```
 
 ## Project Setup
 To clone this repository you will need to have Python compiler 
