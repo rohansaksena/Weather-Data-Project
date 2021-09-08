@@ -3,6 +3,8 @@
 The Weather Data Project is one of my first projects on Data Analysis
 It is a time-series data set with per hour information about the weather conditions at a particular location.It records Temperature, Dew Point Temperature, Relative Humidity, Wind Speed, Visibility, Pressure and Conditions.  
 
+# Data Source: Kaggle
+
 ##  Project outcomes:
 ####  We will be successfully answering a bunch of questions :
 
