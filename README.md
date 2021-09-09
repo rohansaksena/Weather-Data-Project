@@ -3,7 +3,7 @@
 The Weather Data Project is one of my first projects on Data Analysis
 It is a time-series data set with per hour information about the weather conditions at a particular location.It records Temperature, Dew Point Temperature, Relative Humidity, Wind Speed, Visibility, Pressure and Conditions.  
 
-# Data Source: Kaggle
+## Data Source: Kaggle
 
 ##  Project outcomes:
 ####  We will be successfully answering a bunch of questions :
@@ -77,8 +77,16 @@ weather_df[(weather_df['Weather Condition']=='Clear') & (weather_df['Rel Hum_%']
 
 ## Project Setup
 To clone this repository you will need to have Python compiler 
-installed on your system alongside with the Pandas library.
- 
+installed on your system alongside with the Pandas library.I would rather suggest that you download jupyter notebook if you've not already.
+
+To access all of the files I recommend you fork this repo and then clone it locally. Instructions on how to do this can be found here: https://help.github.com/en/github/getting-started-with-github/fork-a-repo
+
+The other option is to click the green "clone or download" button and then click "Download ZIP". You then should extract all of the files to the location you want to edit your code.
+
+Installing Jupyter Notebook: https://jupyter.readthedocs.io/en/latest/install.html<br>
+Installing Pandas library: https://pandas.pydata.org/pandas-docs/stable/install.html
+
+
 
 
 
